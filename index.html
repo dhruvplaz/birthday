@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday Baby</title>
+
+  <!-- Allura font -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      background:#05050a;
+      color:#ffffff;
+      font-family:-apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      display:flex;
+      justify-content:center;
+    }
+
+    .page{
+      width:100%;
+      max-width:390px;
+      min-height:100vh;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* ===== HUGE STICKERS ===== */
+    .kuromi{
+      position:absolute;
+      width:180px; /* VERY BIG */
+      pointer-events:none;
+      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.8));
+    }
+
+    .flower{
+      position:absolute;
+      width:155px; /* VERY BIG */
+      pointer-events:none;
+      filter: drop-shadow(0 18px 38px rgba(0,0,0,0.75));
+    }
+
+    /* Positions */
+    .tl{ top:-10px; left:-10px; }
+    .tr{ top:-10px; right:-10px; }
+    .bl{ bottom:150px; left:-10px; }
+    .br{ bottom:150px; right:-10px; }
+
+    /* ===== CENTER TITLE ===== */
+    .title-wrap{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 24px;
+      pointer-events:none;
+    }
+
+    h1{
+      margin:0;
+      font-family:'Allura', cursive;
+      font-size:60px;
+      font-weight:400;
+      line-height:0.95;
+      letter-spacing:0.8px;
+    }
+
+    /* ===== BOTTOM ===== */
+    .footer{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:28px;
+      text-align:center;
+    }
+
+    .footer p{
+      margin:0 0 14px;
+      font-size:18px;
+      opacity:0.9;
+    }
+
+    .btns{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:14px 36px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.18);
+      border:1px solid rgba(255,255,255,0.3);
+      color:white;
+      text-decoration:none;
+      font-size:16px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Smaller phones safety */
+    @media (max-width: 375px){
+      h1{ font-size:54px; }
+      .kuromi{ width:165px; }
+      .flower{ width:145px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- TOP -->
+    <img src="kuromi.png" class="kuromi tl" alt="">
+    <img src="flowers.png" class="flower tr" alt="">
+
+    <!-- TITLE -->
+    <div class="title-wrap">
+      <h1>Happy Birthday<br>Baby</h1>
+    </div>
+
+    <!-- BOTTOM -->
+    <img src="flowers.png" class="flower bl" alt="">
+    <img src="kuromi.png" class="kuromi br" alt="">
+
+    <div class="footer">
+      <p>Do you want to continue?</p>
+      <div class="btns">
+        <a href="choice.html" class="btn">Yes</a>
+        <a href="no.html" class="btn">No</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
